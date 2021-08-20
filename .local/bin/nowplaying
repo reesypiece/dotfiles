@@ -1,0 +1,51 @@
+#! /bin/zsh
+
+# TODO: check which one's the louder one between the two if they're both playing at the same time
+# code from micahco/spotify-now
+artist () {
+    res=$(echo "$spotifymeta" | grep -m 1 "xesam:artist" -b2 | tail -n1)
+    res="${res%\"*}"
+    res="${res#*\"}"
+    # if advertisement is playing currently
+    if [[ "$res" == "" ]]; then
+        echo "Ad"
+    else
+        echo "$res"
+    fi
+}
+
+title () {
+    res=$(echo "$spotifymeta" | grep -m 1 "xesam:title" -b1 | tail -n1)
+    res="${res%\"*}"
+    res="${res#*\"}"
+    echo "$res"
+}
+
+# check if spotify's running
+spotifystatus=`pidof spotify | wc -l`
+# check if cmus is running
+cmusstatus=`pidof cmus | wc -l`
+nowplayingtext=""
+
+# cmus first, then spotify 
+if [[ "$cmusstatus" == 1 ]]; then
+	cmusplayback=`cmus-remote -C status | grep "status" | head -n 1 | cut -d ' ' -f 2-`
+	# cmus also has a "stopped" mode
+	if [[ "$cmusplayback" == "playing" ]]; then
+		cmussong=`cmus-remote -C status | grep "tag title" | head -n 1 | cut -d ' ' -f 3-`
+		cmusartist=`cmus-remote -C status | grep "tag artist" | head -n 1 | cut -d ' ' -f 3-`
+		nowplayingtext="$(echo -e '\uf001') ${cmusartist} - ${cmussong} ||"
+	fi
+fi
+if [[ "$spotifystatus" == 1 ]]; then
+    playback=`dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'PlaybackStatus' | grep -o Paused`
+    if [[ "$playback" != "Paused" ]]; then
+       spotifymeta=`dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'`
+       spotifyartist="$(artist)"
+	   spotifysong="$(title)"
+	   nowplayingtext="$(echo -e '\uf1bc') ${spotifyartist} - ${spotifysong} ||"
+    fi
+fi
+
+echo $nowplayingtext
+
