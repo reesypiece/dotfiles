@@ -37,7 +37,7 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>')
 map('n', '<A-S-c>', '<Cmd>BufferClose!<CR>')
 
 -- colorscheme
-vim.cmd 'colorscheme dogrun'
+vim.cmd 'colorscheme embark'
 require('colorizer').setup()
 
 -- mouse support?

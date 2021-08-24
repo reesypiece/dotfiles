@@ -1,4 +1,6 @@
-  -- Base
+-- TODO: not have all of DT's imports, separate everything into bits
+
+-- Base
 import XMonad
 import System.Directory
 import System.IO (hPutStrLn)
@@ -103,8 +105,8 @@ myWorkspaces = [" I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII "
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#e5e5e5"
-myFocusedBorderColor = "#BD93F9"
+myNormalBorderColor  = "#f8f8f2"
+myFocusedBorderColor = "#f02e6e"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -252,7 +254,7 @@ tall	= renamed [Replace "tall"]
 		  $ mySpacing 5
 		  $ ResizableTall 1 (3/100) (1/2) []
 
-myLayout = avoidStruts $ mouseResize layoutRotation
+myLayout = avoidStruts $ mouseResize $ mkToggle (NOBORDERS ?? NBFULL ?? EOT) layoutRotation
 	where
 	layoutRotation = withBorder myBorderWidth tall
 					||| Full
@@ -306,12 +308,12 @@ myEventHook = mempty
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
 myLogHook h = dynamicLogWithPP xmobarPP
-    { ppLayout = wrap "(<fc=#e4b63c>" "</fc>)"
-    , ppTitle = xmobarColor "#69c0fa" ""-- title of active window
+    { ppLayout = wrap "(<fc=#eeffff>" "</fc>)"
+    , ppTitle = xmobarColor "#f02e6e" ""-- title of active window
     , ppVisible = wrap "(" ")"  -- Non-focused (but still visible) screen
-    , ppCurrent = wrap "<fc=#01eac0>[</fc><fc=#04dbb5>" "</fc><fc=#01eac0>]</fc>"-- Non-focused (but still visible) screen
-    , ppHidden = xmobarColor "#e4e3e9" ""-- Hidden
-    , ppHiddenNoWindows = xmobarColor "#e4e3e9" ""-- Hidden, with no windows
+    , ppCurrent = wrap "<fc=#2ce592>[</fc><fc=#2ce592>" "</fc><fc=#2ce592>]</fc>"-- Non-focused (but still visible) screen
+    , ppHidden = xmobarColor "#a6b3cc" ""-- Hidden
+    , ppHiddenNoWindows = xmobarColor "#585273" ""-- Hidden, with no windows
     , ppSep = " || "
     , ppOrder = \(ws:_:t:_) -> [ws,t]
     , ppOutput = hPutStrLn h

@@ -5,45 +5,39 @@ XTerm.vt100.locale: false
 XTerm.vt100.utf8: true
 XTerm*internalBorder: 5
 
-! Terminal colors
 ! special
-*.foreground:  #e8e6ed
-*.background:  #292a44
-*.cursorColor: #b89bf9
-!
-! Black
-*.color0:      #12131e
-*.color8:      #666699
-!
-! Red
-*.color1:      #dd7755
-*.color9:      #ff92cd
-!
-! Green
-*.color2:      #04dbb5
-*.color10:     #01eac0
-!
-! Yellow
-*.color3:      #f2e7b7
-*.color11:     #fffca8
-!
-! Blue
-*.color4:      #7aa5ff
-*.color12:     #69c0fa
-!
-! Magenta
-*.color5:      #bf9cf9
-*.color13:     #c17ff8
-!
-! Cyan
-*.color6:      #56d3c2
-*.color14:     #8bfde1
-!
-! White
-*.color7:      #e4e3e9
-*.color15:     #f4f2f9
-!
-! Bold, Italic, Underline
-*.colorBD:     #ccccff
-!*.colorIT:
-*.colorUL:     #596181
+*.foreground:   #eeffff
+*.background:   #1e1c31
+*.cursorColor:  #eeffff
+
+! black
+*.color0:       #1e1c31
+*.color8:       #585273
+
+! red
+*.color1:       #f0719b
+*.color9:       #f02e6e
+
+! green
+*.color2:       #a1efd3
+*.color10:      #2ce592
+
+! yellow
+*.color3:       #ffe9aa
+*.color11:      #ffb378
+
+! blue
+*.color4:       #57c7ff
+*.color12:      #1da0e2
+
+! magenta
+*.color5:       #c792ea
+*.color13:      #a742ea
+
+! cyan
+*.color6:       #87dfeb
+*.color14:      #63f2f1
+
+! white
+*.color7:       #f8f8f2
+*.color15:      #a6b3cc

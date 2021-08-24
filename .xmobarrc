@@ -3,11 +3,11 @@ Config {
    -- appearance
    -- i listen to songs called ラグトレイン and 봉봉쇼콜라...
      font =         "xft:JetBrainsMono Nerd Font:size=9:bold:antialias=true,Noto Sans CJK JP:size=9:bold:antialias=true,Noto Sans CJK KR:size=9:bold:antialias=true"
-   , bgColor =      "#292a44"
-   , fgColor =      "#e8e6ed"
+   , bgColor =      "#1e1c31"
+   , fgColor =      "#eeffff"
    , position =     Top
    , border =       BottomB
-   , borderColor =  "#c17ff8"
+   , borderColor =  "#f02e6e"
 
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
@@ -39,52 +39,52 @@ Config {
    , commands = 
 
         -- weather monitor
-        [ Run Weather "CYYZ" [ "--template", "<skyCondition> | <fc=#3fc4de><tempC></fc>\xfa03"
+        [ Run Weather "CYYZ" [ "--template", "<skyCondition> | <fc=#57c7ff><tempC></fc>\xfa03"
                              ] 36000
 
         -- network activity monitor (dynamic interface resolution)
         , Run DynNetwork     [ "--template" , "\xf1eb <tx>kB/s|<rx>kB/s"
                              , "--Low"      , "1000"       -- units: B/s
                              , "--High"     , "5000"       -- units: B/s
-                             , "--low"      , "#29d398"
-                             , "--normal"   , "#fab795"
-                             , "--high"     , "#e95678"
+                             , "--low"      , "#a1efd3"
+                             , "--normal"   , "#ffe9aa"
+                             , "--high"     , "#f0719b"
                              ] 10
 
         -- cpu activity monitor
         , Run MultiCpu       [ "--template" , "\xf2db <total0>%|<total1>%"
                              , "--Low"      , "50"         -- units: %
                              , "--High"     , "85"         -- units: %
-                             , "--low"      , "#29d398"
-                             , "--normal"   , "#fab795"
-                             , "--high"     , "#e95678"
+                             , "--low"      , "#a1efd3"
+                             , "--normal"   , "#ffe9aa"
+                             , "--high"     , "#f0719b"
                              ] 10
 
         -- cpu core temperature monitor
         , Run CoreTemp       [ "--template" , "\f2c7 <core0>°C|<core1>°C"
                              , "--Low"      , "70"        -- units: °C
                              , "--High"     , "80"        -- units: °C
-                             , "--low"      , "#29d398"
-                             , "--normal"   , "#fab795"
-                             , "--high"     , "#e95678"
+                             , "--low"      , "#a1efd3"
+                             , "--normal"   , "#ffe9aa"
+                             , "--high"     , "#f0719b"
                              ] 50
                           
         -- memory usage monitor
         , Run Memory         [ "--template" ,"\xf85a <usedratio>%"
                              , "--Low"      , "20"        -- units: %
                              , "--High"     , "90"        -- units: %
-                             , "--low"      , "#29d398"
-                             , "--normal"   , "#fab795"
-                             , "--high"     , "#e95678"
+                             , "--low"      , "#a1efd3"
+                             , "--normal"   , "#ffe9aa"
+                             , "--high"     , "#f0719b"
                              ] 10
 
         -- battery monitor
         , Run Battery        [ "--template" , "<acstatus>"
                              , "--Low"      , "10"        -- units: %
                              , "--High"     , "80"        -- units: %
-                             , "--low"      , "#e95678"
-                             , "--normal"   , "#fab795"
-                             , "--high"     , "#29d398"
+                             , "--low"      , "#f0719b"
+                             , "--normal"   , "#ffe9aa"
+                             , "--high"     , "#a1efd3"
 
                              , "--" -- battery specific options
                                        -- discharging status

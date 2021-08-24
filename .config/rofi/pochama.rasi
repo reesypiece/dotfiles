@@ -1,9 +1,9 @@
 * {
-	bg: #292a44ff;
-	fg: #e8e6edff;
-	cr: #b89bf9ff;
+	bg: #1e1c31ff;
+	fg: #eeffffff;
+	cr: #f0719bff;
 	al: #00000000;
-	ac: #bf9cf9ff;
+	ac: #f0719bff;
 	blk: #000000ff;
 }
 
