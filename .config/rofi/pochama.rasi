@@ -55,13 +55,19 @@ mainbox {
 }
 
 element {
-	background-color:  @al;
+	background-color:  @bg;
 	text-color:		   @fg;
 	orientation:	   horizontal;
 	padding:		   5px;
 }
 
+element-text {
+	background-color: inherit;
+	text-color:		  inherit;
+}
+
 element-icon {
+	background-color: inherit;
 	size: 25px;
 }
 
@@ -72,4 +78,4 @@ element selected {
 	text-color:		   @blk;
 }
 
-// vim: ft=css
+/* vim: ft=css */

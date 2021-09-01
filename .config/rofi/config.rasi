@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,run,ssh";
+	modi: "window,run,ssh,drun";
 	width: 600;
 /*	lines: 15;*/
 /*	columns: 1;*/
@@ -21,7 +21,7 @@ configuration {
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
-drun-display-format: "{name}";
+	drun-display-format: "{name}";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -149,4 +149,4 @@ drun-display-format: "{name}";
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
-// vim: ft=css
+/* vim: ft=css */
