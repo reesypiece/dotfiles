@@ -36,6 +36,11 @@ map('n', '<A-x>', '<Cmd>BufferNext<CR>')
 map('n', '<A-c>', '<Cmd>BufferClose<CR>')
 map('n', '<A-S-c>', '<Cmd>BufferClose!<CR>')
 
+-- lualine
+require('lualine').setup{
+	options = { theme = 'auto' },
+}
+
 -- colorscheme
 vim.cmd 'colorscheme embark'
 require('colorizer').setup()

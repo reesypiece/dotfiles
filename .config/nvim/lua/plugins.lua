@@ -48,13 +48,10 @@ return require('packer').startup(function()
 		end
 	}
 
-	use {'famiu/feline.nvim',
-		config = function()
-			require('feline').setup {
-				preset = 'noicon'
-			}
-		end
+	use { 'hoob3rt/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
+	
 
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
 		config = function()
@@ -96,4 +93,6 @@ return require('packer').startup(function()
 	use {'embark-theme/vim', as = 'embark'}
 
 	use "norcalli/nvim-colorizer.lua"
+
+	use "onsails/lspkind-nvim"
 end)
