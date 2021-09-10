@@ -9,6 +9,10 @@ zstyle :compinstall filename '/home/pochama/.zshrc'
 
 autoload -Uz compinit
 compinit
+# case insensitive path-completion 
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+# partial completion suggestions
+zstyle ':completion:*' list-suffixes zstyle ':completion:*' expand prefix suffix 
 # End of lines added by compinstall
 
 ### Added by Zinit's installer
@@ -49,3 +53,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/pochama/perl5"; export PERL_MM_OPT;
 
 export PATH=/home/pochama/.local/bin:$PATH
 alias config='/usr/bin/git --git-dir=/home/pochama/.cfg/ --work-tree=/home/pochama'
+alias ls="exa -lhga --icons"
+
+eval $(thefuck --alias)
