@@ -13,8 +13,6 @@ map('n', '<C-n>', '<Cmd>NvimTreeToggle<CR>')
 map('n', '<leader>r', '<Cmd>NvimTreeRefresh<CR>')
 map('n', '<leader>n', '<Cmd>NvimTreeFindFile<CR>')
 
--- Bufferline 
-map('n', '<A-z>', '<Cmd>BufferPrevious<CR>')
-map('n', '<A-x>', '<Cmd>BufferNext<CR>')
-map('n', '<A-c>', '<Cmd>BufferClose<CR>')
-map('n', '<A-S-c>', '<Cmd>BufferClose!<CR>')
+-- Bufferline.nvim
+map('n', '<A-z>', '<Cmd>BufferLineCyclePrev<CR>')
+map('n', '<A-x>', '<Cmd>BufferLineCycleNext<CR>')
