@@ -33,5 +33,6 @@ return require('packer').startup(function()
 	use 'dstein64/nvim-scrollview'
 	use 'jiangmiao/auto-pairs'
 	use 'andweeb/presence.nvim'
+    use 'wakatime/vim-wakatime' -- Time tracker
 end)
 
