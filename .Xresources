@@ -5,6 +5,8 @@ XTerm.vt100.locale: false
 XTerm.vt100.utf8: true
 XTerm*internalBorder: 5
 
+! so tmux gets 256-color
+
 ! special
 *.foreground:   #eeffff
 *.background:   #1e1c31
