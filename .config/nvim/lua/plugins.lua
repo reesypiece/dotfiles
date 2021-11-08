@@ -9,10 +9,15 @@ return require('packer').startup(function()
 		'hoob3rt/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
-	    use {
+	use {
         'akinsho/nvim-bufferline.lua',
         requires = {'kyazdani42/nvim-web-devicons'}
     }
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use('glepnir/dashboard-nvim')
 
 	-- LSP stuff
 	use {'hrsh7th/nvim-compe', requires = {'neovim/nvim-lspconfig', 'kabouzeid/nvim-lspinstall', 'hrsh7th/vim-vsnip'}}	
@@ -26,6 +31,8 @@ return require('packer').startup(function()
 	use {'ntk148v/vim-horizon', as = 'horizon'}
 	use {'dracula/vim', as = 'dracula'}
 	use {'embark-theme/vim', as = 'embark'}
+    use {'folke/tokyonight.nvim', as = 'tokyonight'}
+    use {'joshdick/onedark.vim', as = 'onedark'}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use "norcalli/nvim-colorizer.lua"
 
@@ -33,6 +40,6 @@ return require('packer').startup(function()
 	use 'dstein64/nvim-scrollview'
 	use 'jiangmiao/auto-pairs'
 	use 'andweeb/presence.nvim'
-    use 'wakatime/vim-wakatime' -- Time tracker
+	use 'wakatime/vim-wakatime'
 end)
 
