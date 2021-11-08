@@ -8,5 +8,6 @@ return {
     require("plugconf.lsp"),
     require("plugconf.lspkind"),
     require("plugconf.nvim-colorizer"),
-    require("plugconf.nvimtree")
+    require("plugconf.nvimtree"),
+    require('plugconf.dashboard'),
 }
