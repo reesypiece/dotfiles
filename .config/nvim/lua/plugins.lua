@@ -20,7 +20,15 @@ return require('packer').startup(function()
     use('glepnir/dashboard-nvim')
 
 	-- LSP stuff
-	use {'hrsh7th/nvim-compe', requires = {'neovim/nvim-lspconfig', 'kabouzeid/nvim-lspinstall', 'hrsh7th/vim-vsnip'}}	
+	use({
+		'hrsh7th/nvim-cmp',
+		requires = {
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'hrsh7th/cmp-path' },
+			{ 'hrsh7th/cmp-buffer' },
+		},
+	})
+	use 'neovim/nvim-lspconfig'
 	use 'nvim-lua/lsp_extensions.nvim'
 	use 'nvim-lua/completion-nvim'
     use 'onsails/lspkind-nvim'

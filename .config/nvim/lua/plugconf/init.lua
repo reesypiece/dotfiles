@@ -3,7 +3,7 @@ return {
     require("plugconf.lualine"),
     require("plugconf.richpresence"),
     require("plugconf.treesitter"),
---    require("plugconf.cmp"),
+    require("plugconf.cmp"),
     require("plugconf.gitsigns"),
     require("plugconf.lsp"),
     require("plugconf.lspkind"),
