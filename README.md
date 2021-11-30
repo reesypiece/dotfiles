@@ -6,3 +6,7 @@ nowplaying's code taken from [spotify-now](https://github.com/micahco/spotify-no
 nvim config taken from [TorchedSammy's](https://github.com/TorchedSammy/dotfiles) and [nii-nvim](https://github.com/Theory-of-Everything/nii-nvim). make sure to follow lsp install instructions from nii-nvim in order for nvim to work
 
 screenshots when i'm not lazy. all hail embark.
+
+## TODO:
+[  ] refactor xmonad keybindings
+[  ] create embark theme for gtk/firefox
