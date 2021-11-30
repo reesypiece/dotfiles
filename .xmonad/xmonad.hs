@@ -105,8 +105,8 @@ myWorkspaces = [" I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII "
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#f8f8f2"
-myFocusedBorderColor = "#f02e6e"
+myNormalBorderColor  = "#a6b3cc"
+myFocusedBorderColor = "#f8f8f2"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -216,6 +216,18 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask, xK_2), spawn "maim ~/Pictures/screenshots/$(date +%s).png")
     , ((mod1Mask, xK_3), spawn "maim -i $(xdotool getactivewindow) ~/Pictures/screenshots/$(date +%s).png")
     ]
+    -- ++
+
+    --
+    -- media bindings
+    --
+    -- `additionalKeysP`
+    -- [ (<XF86MonBrightnessUp>, spawn "brightnessctl s +5%")
+    -- , (<XF86MonBrightnessDown>, spawn "brightnessctl s 5%-")
+    -- , (<XF86AudioMute>, spawn "amixer set Master toggle")
+    -- , (<XF86AudioLowerVolume>, spawn "amixer set Master 5%- unmute")
+    -- , (<XF86AudioRaiseVolume>, spawn "amixer set Master 5%+ unmute")
+    -- ]
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
 --
@@ -309,7 +321,7 @@ myEventHook = mempty
 --
 myLogHook h = dynamicLogWithPP xmobarPP
     { ppLayout = wrap "(<fc=#eeffff>" "</fc>)"
-    , ppTitle = xmobarColor "#f02e6e" ""-- title of active window
+    , ppTitle = xmobarColor "#57c7ff" ""-- title of active window
     , ppVisible = wrap "(" ")"  -- Non-focused (but still visible) screen
     , ppCurrent = wrap "<fc=#2ce592>[</fc><fc=#2ce592>" "</fc><fc=#2ce592>]</fc>"-- Non-focused (but still visible) screen
     , ppHidden = xmobarColor "#a6b3cc" ""-- Hidden

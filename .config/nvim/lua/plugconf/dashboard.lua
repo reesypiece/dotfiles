@@ -26,5 +26,5 @@ g.dashboard_custom_section = {
 
 g.dashboard_custom_footer = {
 	'	',
-    'monochrome to colors',
+    'now i\'m a savage',
 }

@@ -56,3 +56,5 @@ alias config='/usr/bin/git --git-dir=/home/pochama/.cfg/ --work-tree=/home/pocha
 alias ls="exa -lhga --icons"
 
 eval $(thefuck --alias)
+
+alias luamake=/home/pochama/.local/share/nvim/lspservers/lua-language-server/3rd/luamake/luamake

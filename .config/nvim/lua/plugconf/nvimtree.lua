@@ -1,11 +1,8 @@
 local g = vim.g
 
-g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
-g.nvim_tree_gitignore = 1
 g.nvim_tree_auto_ignore_ft = { 'startify', 'dashboard' }
 g.nvim_tree_quit_on_open = 0
-g.nvim_tree_indent_markers = 0
-g.nvim_tree_hide_dotfiles = 1
+g.nvim_tree_indent_markers = 1
 g.nvim_tree_git_hl = 1
 g.nvim_tree_highlight_opened_files = 1
 g.nvim_tree_root_folder_modifier = ':~'
@@ -22,6 +19,9 @@ g.nvim_tree_show_icons = {
 }
 
 require('nvim-tree').setup({
+    ignore = { '.git', 'node_modules', '.cache' },
+    gitignore = 1,
+    hide_dotfiles = 1,
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
@@ -30,15 +30,6 @@ require('nvim-tree').setup({
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = false,
-    diagnostics = {
-        enable = false,
-        icons = {
-            hint = "",
-            info = "",
-            warning = "",
-            error = "",
-        }
-    },
 	update_focused_file = {
 		enable = false,
 		update_cwd = false,
