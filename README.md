@@ -8,5 +8,6 @@ nvim config taken from [TorchedSammy's](https://github.com/TorchedSammy/dotfiles
 screenshots when i'm not lazy. all hail embark.
 
 ## TODO:
-[  ] refactor xmonad keybindings
-[  ] create embark theme for gtk/firefox
+- [ ] refactor xmonad keybindings
+- [ ] refactor nvim config
+- [ ] create embark theme for gtk/firefox
